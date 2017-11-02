@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lk0-5x-hv9">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="gVF-oJ-bgg">
+            <objects>
+                <splitViewController id="lk0-5x-hv9" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Tlj-oY-jBK" kind="relationship" relationship="masterViewController" id="Pgs-Bt-QGK"/>
+                        <segue destination="LAt-tD-vLb" kind="relationship" relationship="detailViewController" id="Tbj-av-6Ys"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dl4-P1-1Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-971" y="-50"/>
+        </scene>
+        <!--Note It-->
+        <scene sceneID="1zG-rG-YK3">
+            <objects>
+                <tableViewController id="sfg-57-Xni" customClass="ListController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2qE-qU-Jf7">
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="382"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Note One" textLabel="rZn-4J-FJa" style="IBUITableViewCellStyleDefault" id="8qJ-Qp-urn">
+                                <rect key="frame" x="0.0" y="28" width="295" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qJ-Qp-urn" id="NUL-Pj-Gf5">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Note One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rZn-4J-FJa">
+                                            <rect key="frame" x="16" y="0.0" width="264" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Note Two" textLabel="BUJ-o3-kWS" style="IBUITableViewCellStyleDefault" id="zjb-Lo-wPd">
+                                <rect key="frame" x="0.0" y="72" width="295" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zjb-Lo-wPd" id="uhn-10-8K1">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Note Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BUJ-o3-kWS">
+                                            <rect key="frame" x="16" y="0.0" width="264" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sfg-57-Xni" id="DUn-c0-AuP"/>
+                            <outlet property="delegate" destination="sfg-57-Xni" id="pMy-Y0-Mxx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Note It" id="bBO-hO-nJg"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwy-HT-yOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="-410"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kbr-C0-jdc">
+            <objects>
+                <navigationController id="LAt-tD-vLb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PCf-4w-cvm">
+                        <rect key="frame" x="0.0" y="0.0" width="440.66666665673256" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EY4-4I-AAG" kind="relationship" relationship="rootViewController" id="BeH-zL-vQQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXf-vN-L2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="312"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="34e-zc-E8q">
+            <objects>
+                <viewController id="EY4-4I-AAG" customClass="NoteController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wpz-sd-UBi">
+                        <rect key="frame" x="0.0" y="0.0" width="440.66666666666663" height="382"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="T3b-m1-c01"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Note" id="Put-rv-XTE"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6M-Bu-QOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="312"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b92-Jt-jW8">
+            <objects>
+                <navigationController id="Tlj-oY-jBK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5S4-0L-Bio">
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sfg-57-Xni" kind="relationship" relationship="rootViewController" id="7CM-nd-waq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6C6-ad-fOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="-411"/>
+        </scene>
+    </scenes>
+</document>
